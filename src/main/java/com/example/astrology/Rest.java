@@ -18,6 +18,12 @@ public class Rest {
 		this.udc = udc;
 		this.bdc = bdc;
 	}
+
+	@GetMapping("/")
+	public String home1()
+	{
+		return "home1";
+	}
 	
 	@GetMapping("/login")
 	 public String form(Model model)
@@ -33,11 +39,7 @@ public class Rest {
 	  return "login1";
 	 }
 	
-	@GetMapping("/")
-	public String home1()
-	{
-		return "home1";
-	}
+	
 	
 	@PostMapping("/poojadetails")
 	public String poojadetails(@ModelAttribute("poojadet") BookDet poojadet,Model model)
